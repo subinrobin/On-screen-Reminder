@@ -1,26 +1,12 @@
 package com.self.awareness.controller
 
-import com.self.awareness.homescreen.buttons.ButtonMediator
-import com.self.awareness.homescreen.buttons.StudyModeButton
-import com.self.awareness.homescreen.buttons.VisionModeButton
-import javafx.event.EventHandler
-import javafx.scene.input.MouseEvent
+import com.self.awareness.homescreen.buttons.{ButtonMediator, StudyModeButton, VisionModeButton}
 import scalafx.Includes._
 import scalafx.application.JFXApp3
-import scalafx.beans.property.DoubleProperty
-import scalafx.beans.property.ObjectProperty
-import scalafx.beans.property.StringProperty
-import scalafx.geometry.Insets
-import scalafx.geometry.Pos
+import scalafx.geometry.{Insets, Pos}
 import scalafx.scene.Scene
-import scalafx.scene.control.Button
-import scalafx.scene.effect.DropShadow
 import scalafx.scene.layout.HBox
-import scalafx.scene.paint.Color._
-import scalafx.scene.paint.LinearGradient
-import scalafx.scene.paint.Stops
-import scalafx.scene.shape.Rectangle
-import scalafx.scene.text.Text
+import scalafx.scene.paint.Color.Gray
 
 object Start extends JFXApp3 {
     override def start(): Unit = {

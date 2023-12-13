@@ -1,19 +1,10 @@
 package com.self.awareness.homescreen.buttons
 
-import scalafx.scene.control.Button
-import scalafx.geometry.Pos
-import javafx.event.EventHandler
-import javafx.scene.input.MouseEvent
-import scalafx.util.Duration
 import scalafx.scene.control.Alert
 import scalafx.scene.control.ButtonType
+import scalafx.util.Duration
 
 class StudyModeButton extends AlertButton("Study Mode", Duration(1500000)) {
-
-    alignment = Pos.Center
-    alignmentInParent = Pos.Center
-    prefHeight = 200
-    prefWidth = 300
 
     override def onAlert(): Unit = {
         val alert = new Alert(Alert.AlertType.Information)

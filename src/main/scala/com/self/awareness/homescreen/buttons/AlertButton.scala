@@ -6,11 +6,17 @@ import scalafx.animation.Timeline
 import scalafx.application.Platform
 import scalafx.scene.control.Button
 import scalafx.util.Duration
+import scalafx.geometry.Pos
 
 abstract class AlertButton(
     text: String,
     waitTime: Duration
 ) extends Button {
+
+    alignment = Pos.Center
+    alignmentInParent = Pos.Center
+    prefHeight = 200
+    prefWidth = 300
 
     this.text = text
     var timeline: Option[Timeline] = None
@@ -24,10 +30,7 @@ abstract class AlertButton(
             cycleCount = Timeline.Indefinite
             keyFrames = Seq(
               KeyFrame(
-                {
-                    println("wait time started")
-                    waitTime
-                },
+                waitTime,
                 onFinished = _ =>
                     Platform.runLater {
                         println("onalert started")
